@@ -13,6 +13,8 @@ public class Usuario {
     private int codigo;
     private String login;
     private String senha;
+    private int tipo;
+
     
     //construtor padrão
     Usuario(){}
@@ -37,5 +39,13 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    public  int getTipo(){
+        return tipo;
+    }
+    public void setTipo(int tipo){
+        this.tipo = tipo;
+    }
+    
 }
 

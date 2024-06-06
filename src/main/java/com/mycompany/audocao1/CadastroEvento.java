@@ -33,11 +33,11 @@ public class CadastroEvento extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        nomeField = new javax.swing.JTextField();
+        descricaoField = new javax.swing.JTextField();
+        datafinalField = new javax.swing.JTextField();
+        datainicioField = new javax.swing.JTextField();
+        criarEvento = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         jRadioButtonMenuItem1.setSelected(true);
@@ -46,7 +46,7 @@ public class CadastroEvento extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(null);
-        setMinimumSize(new java.awt.Dimension(500, 500));
+        setMinimumSize(new java.awt.Dimension(490, 520));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Cooper Black", 1, 40)); // NOI18N
@@ -57,88 +57,89 @@ public class CadastroEvento extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel2.setText("Nome:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 180, 80, 23);
+        jLabel2.setBounds(30, 130, 80, 20);
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel3.setText("Descrição:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(40, 260, 96, 23);
+        jLabel3.setBounds(30, 200, 96, 20);
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel4.setText("Data Inicial:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(40, 360, 147, 23);
+        jLabel4.setBounds(30, 290, 147, 20);
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel5.setText("Data Final:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(290, 360, 100, 23);
+        jLabel5.setBounds(30, 350, 100, 20);
 
-        jTextField1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        nomeField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        nomeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                nomeFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(40, 210, 327, 31);
+        getContentPane().add(nomeField);
+        nomeField.setBounds(30, 160, 270, 30);
 
-        jTextField2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        descricaoField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        descricaoField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                descricaoFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(40, 290, 327, 34);
+        getContentPane().add(descricaoField);
+        descricaoField.setBounds(30, 230, 270, 30);
 
-        jTextField3.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        datafinalField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        datafinalField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                datafinalFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(290, 390, 140, 25);
+        getContentPane().add(datafinalField);
+        datafinalField.setBounds(30, 380, 140, 25);
 
-        jTextField4.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(40, 390, 139, 25);
+        datainicioField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        getContentPane().add(datainicioField);
+        datainicioField.setBounds(30, 320, 139, 25);
 
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton1.setText("Criar");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        criarEvento.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        criarEvento.setText("Criar");
+        criarEvento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        criarEvento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        criarEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                criarEventoActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(370, 440, 84, 31);
+        getContentPane().add(criarEvento);
+        criarEvento.setBounds(30, 430, 84, 30);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/Pataazul.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/OlhinhosC.png"))); // NOI18N
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 0, 520, 500);
+        jLabel6.setBounds(0, 0, 490, 500);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void descricaoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_descricaoFieldActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void datafinalFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datafinalFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_datafinalFieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void criarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criarEventoActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_criarEventoActionPerformed
+
+    private void nomeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_nomeFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,7 +152,7 @@ public class CadastroEvento extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -176,7 +177,10 @@ public class CadastroEvento extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton criarEvento;
+    private javax.swing.JTextField datafinalField;
+    private javax.swing.JTextField datainicioField;
+    private javax.swing.JTextField descricaoField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -184,9 +188,6 @@ public class CadastroEvento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField nomeField;
     // End of variables declaration//GEN-END:variables
 }

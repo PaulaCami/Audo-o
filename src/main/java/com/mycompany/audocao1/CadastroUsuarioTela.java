@@ -4,6 +4,9 @@
  */
 package com.mycompany.audocao1;
 
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author pcami
@@ -34,129 +37,192 @@ public class CadastroUsuarioTela extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        verificarsenhaField = new javax.swing.JPasswordField();
+        senhaField = new javax.swing.JPasswordField();
+        nomeField = new javax.swing.JTextField();
+        idadeField = new javax.swing.JTextField();
+        generoField = new javax.swing.JTextField();
+        cpfField = new javax.swing.JTextField();
+        emailField = new javax.swing.JTextField();
+        cadastrar = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(434, 620));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 36)); // NOI18N
-        jLabel1.setText("CADASTRO");
+        jLabel1.setFont(new java.awt.Font("Cooper Black", 1, 36)); // NOI18N
+        jLabel1.setText("Criar Conta");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(140, 0, 243, 66);
+        jLabel1.setBounds(20, 20, 243, 66);
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel2.setText("NOME");
+        jLabel2.setText("NOME/USUÁRIO");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(58, 148, 70, 23);
+        jLabel2.setBounds(10, 100, 170, 23);
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel3.setText("IDADE");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(58, 211, 70, 23);
+        jLabel3.setBounds(10, 170, 70, 23);
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel4.setText("GÊNERO");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(58, 276, 90, 23);
+        jLabel4.setBounds(10, 240, 90, 23);
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel5.setText("EMAIL");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(58, 408, 70, 23);
+        jLabel5.setBounds(10, 390, 70, 23);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel6.setText("CPF");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(58, 341, 50, 23);
+        jLabel6.setBounds(10, 320, 50, 23);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel8.setText("SENHA");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(58, 477, 60, 23);
+        jLabel8.setBounds(10, 460, 60, 23);
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel9.setText("VERIFICAR SENHA");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(58, 546, 160, 23);
+        jLabel9.setBounds(150, 460, 160, 23);
+        getContentPane().add(verificarsenhaField);
+        verificarsenhaField.setBounds(160, 490, 130, 30);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        senhaField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                senhaFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(58, 177, 284, 22);
+        getContentPane().add(senhaField);
+        senhaField.setBounds(10, 490, 130, 30);
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        nomeField.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
+        nomeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                nomeFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(58, 244, 117, 22);
+        getContentPane().add(nomeField);
+        nomeField.setBounds(10, 130, 190, 30);
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        idadeField.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
+        idadeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                idadeFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(58, 309, 117, 22);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(58, 380, 117, 22);
+        getContentPane().add(idadeField);
+        idadeField.setBounds(10, 200, 190, 30);
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        generoField.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
+        generoField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                generoFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(58, 443, 284, 22);
-        getContentPane().add(jTextField6);
-        jTextField6.setBounds(58, 512, 117, 22);
-        getContentPane().add(jTextField7);
-        jTextField7.setBounds(58, 587, 117, 22);
+        getContentPane().add(generoField);
+        generoField.setBounds(10, 270, 190, 30);
 
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton1.setText("OK");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cpfField.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
+        getContentPane().add(cpfField);
+        cpfField.setBounds(10, 350, 190, 30);
+
+        emailField.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
+        emailField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                emailFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(369, 596, 84, 25);
+        getContentPane().add(emailField);
+        emailField.setBounds(10, 420, 190, 30);
+
+        cadastrar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        cadastrar.setText("OK");
+        cadastrar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        cadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cadastrar);
+        cadastrar.setBounds(260, 550, 84, 25);
+
+        jLabel7.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/pegadasPa.png"))); // NOI18N
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(0, 0, 430, 590);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void emailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_emailFieldActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void nomeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_nomeFieldActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void idadeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idadeFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_idadeFieldActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void generoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generoFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_generoFieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
+         try {
+            registerUser();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
+        }
+         var JanelaA = new JanelaA();
+                    JanelaA.setVisible(true);
+                    dispose();
+        
+
+    }//GEN-LAST:event_cadastrarActionPerformed
+
+    private void senhaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_senhaFieldActionPerformed
+    
+    private void registerUser() throws SQLException {
+        String nome = nomeField.getText();
+        String idade = idadeField.getText();
+        String genero = generoField.getText();
+        String cpf = cpfField.getText();
+        String email = emailField.getText();
+        String senha = new String(senhaField.getPassword());
+        String verificarSenha = new String(verificarsenhaField.getPassword());
+
+        if (!senha.equals(verificarSenha)) {
+            JOptionPane.showMessageDialog(this, "Senhas não coincidem!");
+            return;
+        }
+
+        Cadastro cadastro = new Cadastro();
+        cadastro.setNome(nome);
+        cadastro.setIdade(Integer.parseInt(idade));
+        cadastro.setGenero(genero);
+        cadastro.setCpf(cpf);
+        cadastro.setEmail(email);
+        cadastro.setSenha(senha);
+        cadastro.setVerificarSenha(verificarSenha);
+
+        CadastroDAO cadastroDAO = new CadastroDAO();
+        cadastroDAO.cadastrar(cadastro);
+
+        JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
+    }
 
     /**
      * @param args the command line arguments
@@ -194,21 +260,22 @@ public class CadastroUsuarioTela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton cadastrar;
+    private javax.swing.JTextField cpfField;
+    private javax.swing.JTextField emailField;
+    private javax.swing.JTextField generoField;
+    private javax.swing.JTextField idadeField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField nomeField;
+    private javax.swing.JPasswordField senhaField;
+    private javax.swing.JPasswordField verificarsenhaField;
     // End of variables declaration//GEN-END:variables
 }
